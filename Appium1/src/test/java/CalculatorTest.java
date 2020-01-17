@@ -45,6 +45,16 @@ public class CalculatorTest {
 		cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.android.calculator2.Calculator");
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http:127.0.0.1:4723/wd/hub"), cap);
 		System.out.println("Application Started.....");
+		MobileElement el1 = (MobileElement) driver.findElementById("com.android.calculator2:id/digit_9");
+		el1.click();
+		MobileElement el2 = (MobileElement) driver.findElementById("com.android.calculator2:id/digit_1");
+		el2.click();
+		MobileElement el3 = (MobileElement) driver.findElementByAccessibilityId("plus");
+		el3.click();
+		MobileElement el4 = (MobileElement) driver.findElementById("com.android.calculator2:id/digit_9");
+		el4.click();
+		MobileElement el5 = (MobileElement) driver.findElementByAccessibilityId("equals");
+		el5.click();
 		
 	}
 }

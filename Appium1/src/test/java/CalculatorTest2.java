@@ -34,7 +34,9 @@ public class CalculatorTest2 {
 	{
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "joker@4");
-		cap.setCapability(MobileCapabilityType.UDID, "72ed9067");
+		//cap.setCapability(MobileCapabilityType.UDID, "72ed9067");
+		cap.setCapability(MobileCapabilityType.UDID, "10.51.224.182:5555");
+		
 		cap.setCapability(MobileCapabilityType.APPLICATION_NAME, MobilePlatform.ANDROID);
 		cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.0");
 		//cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT ,"25");
@@ -47,5 +49,15 @@ public class CalculatorTest2 {
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http:127.0.0.1:4723/wd/hub"), cap);
 		System.out.println("Application Started.....");
 		
+		MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("9");
+		el1.click();
+		MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("1");
+		el2.click();
+		MobileElement el3 = (MobileElement) driver.findElementByAccessibilityId("Plus");
+		el3.click();
+		MobileElement el4 = (MobileElement) driver.findElementByAccessibilityId("9");
+		el4.click();
+		MobileElement el5 = (MobileElement) driver.findElementByAccessibilityId("Equal");
+		el5.click();
 	}
 }
