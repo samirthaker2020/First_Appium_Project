@@ -1,4 +1,4 @@
-# First_Appium_Project
+# First_Appium_Project_Mobile_Test_Calculator_Using TestNG
 Mobile Testing Appium Installation on Windows
 Software Required
 •	Eclipse IDE--https://www.eclipse.org/downloads/
